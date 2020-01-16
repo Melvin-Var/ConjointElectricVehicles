@@ -46,3 +46,19 @@ For each group, the distribution is of the probability that they purchase the ve
 For each EV brand, we can focus on the respondents predicted to buy their vehicles and see how attractive they find their predicted EV-of-choice versus the other seven brands on offer.
 ![Alt text](Figures/BrandScavengers.png?raw=true "Brand Scavengers")
 We see that the Nissan brand order of threat from other brands is Tesla and Chevrolet as these distributions are the most to the right after the Nissan distribution.
+
+## 2.2. Financial Implications
+The dashboard provides a flexible interface enabling one to modify the values of an attribute for a chosen set of products and predict what impact this has.
+![Alt text](Figures/Interface.png?raw=true "Dashboard Interface")
+Here, we choose to view the impact of increasing the monthly installment of the Model 3 and Model S by upto $100 per month whilst also increasing the the monthly installment of the Model X by upto $200 per month.
+### 2.2.1. Impact of Product Design on Key Financial Measures
+Given our predictions of how customer preferences change with the increasing monthly installments, we can calculate the impact on Key Financial Measures such as Number of Customers, Revenue, Average Revenue per Customer and EBIT.
+![Alt text](Figures/FinancialMeasures.png?raw=true "Financial Measures")
+### 2.2.2. Customer Movements by Segment
+We can also see how customers move between brands due to the increase of Tesla's monthly installments.
+![Alt text](Figures/CustomerSegmentMovement.png?raw=true "Net Customer Position by Segment for Different Brands")
+We can zoom still further by looking at the net position by Segment for a particular monthly installment.
+![Alt text](Figures/CustomerSegmentMovementZoom.png?raw=true "Net Customer Position by Segment for Different Brands at a particular price")
+### 2.2.3. Grid Search on Attribute Changes for Optimum Financial Outcome
+We can choose to modify two attributes simultaneously to see what may be the optimum outcome for a particular EV maker.
+![Alt text](Figures/FinancialGrid.png?raw=true "Financial Measures")
