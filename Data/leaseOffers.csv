@@ -1,0 +1,14 @@
+﻿id,brand,model,monthly_cost,upfront_cost,term,vehicle_worth,range,charge,energy,vehicle_type
+1,Audi,e-tron,759,2499,36,75000,204,150,Electric Vehicle,SUV
+2,Chevrolet,Bolt EV,155,5995,36,37500,259,50,Electric Vehicle,Sedan
+3,Jaguar,I-Pace,899,4900,39,71000,234,100,Electric Vehicle,SUV
+4,Kia,Niro EV,269,4264,36,39500,239,100,Electric Vehicle,SUV
+5,Kia,Niro Plug,219,3995,36,29500,26,3.3,Plug-in Hybrid,SUV
+6,Kia,Optima Plug,239,4995,36,37000,28,3.3,Plug-in Hybrid,Sedan
+7,Nissan,LEAF S,195,4740,24,29900,151,50,Electric Vehicle,Sedan
+8,Nissan,LEAF S +,295,5740,24,36550,226,100,Electric Vehicle,Sedan
+9,Tesla,Model 3,399,5594,36,38000,250,120,Electric Vehicle,Sedan
+10,Tesla,Model S,900,9095,36,75000,285,120,Electric Vehicle,Sedan
+11,Tesla,Model X,999,9194,36,81000,255,120,Electric Vehicle,SUV
+12,Toyota,Prius Prime,229,4292,36,28700,25,3.3,Plug-in Hybrid,Sedan
+13,VW,e-Golf SE,199,3874,36,31300,125,7.2,Electric Vehicle,Sedan
