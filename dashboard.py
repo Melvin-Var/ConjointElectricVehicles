@@ -646,6 +646,8 @@ def plotFinancials(resultsDf, dfFlowLoad, provider, attribute, val, viewType, ag
         dfFlowCopy = dfFlowCopy.round(6)
         if provider == 'Audi':
             dfFlowCopy['VW'] = dfFlowCopy['VW'] - 1
+        else:
+            dfFlowCopy[provider] = dfFlowCopy[provider] - 1
         ChevroletBars = go.Bar(x=xVal, y=dfFlowCopy[dfFlowCopy[attLower + '_1'] == yVal]['Chevrolet'],
                                name='Chevrolet', marker_color=clrs[1])
         JaguarBars = go.Bar(x=xVal, y=dfFlowCopy[dfFlowCopy[attLower + '_1'] == yVal]['Jaguar'],
