@@ -1,12 +1,16 @@
 # 1. Conjoint Analysis for Electric Vehicles
-Code creates a dashboard that showcases the power of Conjoint Analysis for the Electric Vehicle Lease Market (as at January 2020) in San Francisco.
+Code creates a dashboard that showcases the power of Conjoint Analysis for the Electric Vehicle Lease Market (as at January 2020) in San Francisco. The video below gives a walkthrough of the dashboard.
+
+[![IMAGE ALT TEXT](Figures/thumbnail.png?raw=true "Video of Dashboard")](https://youtu.be/JucZrr-W6CY)
 
 In January 2020, the following lease offers were available on Electric Vehicles in San Francisco (source: https://electrek.co/best-electric-vehicle-leases/).
 ![Alt text](Figures/leases.png?raw=true "Electric Vehicle Leases on Offer")
 The lease details are contained in the fields monthly_cost, upfront_cost and term. The remaining fields concern specifications of the electic vehicle (e.g. range, Sedan or SUV). The relative popularity of the vehicles can be found here: https://insideevs.com/news/343998/monthly-plug-in-ev-sales-scorecard/
 
-The central piece of data required for the analysis is a conjoint study. This study would seek to understand individuals preferences and the relative importance of different attributes using a series of experiments. 
+The central piece of data required for the analysis is a conjoint study. Such a study would collect a group of individuals and present them with a series of products. The respondents would either be asked to choose a single product from the group or rank them in order of preference. By so doing, we seek to understand individual preferences and the relative importance of different attributes using a series of experiments. 
 ![Alt text](https://upload.wikimedia.org/wikipedia/commons/8/89/Ice-cream-experiment-example.png)
+
+By performing statistical inference, one can infer the priorities of each individual (which attributes are particularly important to them) as well as the utility they gain from each level of each attribute.
 
 Given a person's responses, one can subsequently predict which product a person will buy. If the person is rational and the conjoint accurately reflects her preferences, she will choose the product that maximizes her utility. Given the utility scores for three products, U1, U2 and U3, a traditional conjoint predicts a person will choose product 1 with probability exp(U1) / [exp(U1) + exp(U2) + exp(U3)].
 
@@ -25,7 +29,7 @@ Utility Scores are simulated for the 10 attributes above for 560 individuals. Th
 # 2. Walkthrough of Dashboard
 The dashboard has two tabs:
 - the first shows the relative attractiveness of the thirteen EVs to the 560 respondents
-- the second enables one to run "what-if" scenarios examining the potential financial and market share implications of adjusting the terms of the lease
+- the second enables one to run "what-if" scenarios examining the potential financial and market profile implications of adjusting the terms of the lease
 ## 2.1. Product Attractiveness
 ### 2.1.1. Predicted Market Share
 We can use conjoint analysis to predict the EV model each respondent will purchase.
