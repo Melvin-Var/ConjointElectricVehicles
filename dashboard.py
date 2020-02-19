@@ -621,7 +621,7 @@ def plotFinancials(resultsDf, dfFlowLoad, provider, attribute, val, viewType, ag
         elif attLower == "upfront":
             val = int(val[1:])
         uniqXval = np.array(dfFlow[attLower + '_1'].unique())
-        print(uniqXval)
+        #print(uniqXval)
         indCalc = np.where(uniqXval == val)[0]
 
         # in case where grid has changed, need to update calculations before updating plots

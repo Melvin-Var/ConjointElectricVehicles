@@ -753,15 +753,20 @@ def InFlowsOutFlows(simDf, ProductsDf, rawInflowsOutflows, numDynamic, offerMatc
     SIOplan['Joiners SIOs (K)'] = (-1 * SIOplan).apply(maxZero, axis=1)
 
     col1 = SIOplan[['brand', 'Baseline SIOs (K)']].groupby('brand').sum()
-    del col1.index.name
+    #del col1.index.name
+    col1.index.name = None  # compatible with Pandas v1.0
     col2 = SIOplan[['brand', 'Scenario SIOs (K)']].groupby('brand').sum()
-    del col2.index.name
+    #del col2.index.name
+    col2.index.name = None
     col4 = SIOplan[['brand', 'Stayers SIOs (K)']].groupby('brand').sum()
-    del col4.index.name
+    #del col4.index.name
+    col4.index.name = None
     col5 = SIOplan[['brand', 'Leavers SIOs (K)']].groupby('brand').sum()
-    del col5.index.name
+    #del col5.index.name
+    col5.index.name = None
     col6 = SIOplan[['brand', 'Joiners SIOs (K)']].groupby('brand').sum()
-    del col6.index.name
+    #del col6.index.name
+    col6.index.name = None
 
     churnStat = pd.concat([col1, col2], axis=1)
     churnStat['Delta'] = col2['Scenario SIOs (K)'] - col1['Baseline SIOs (K)']
@@ -771,17 +776,21 @@ def InFlowsOutFlows(simDf, ProductsDf, rawInflowsOutflows, numDynamic, offerMatc
     churnStat['Joiners'] = col6
 
     denom = SIOplan[['brand', 'Baseline Perc share', 'Scenario Perc share']].groupby('brand').sum()
-    del denom.index.name
+    #del denom.index.name
+    denom.index.name = None
 
     interDf = SIOplan[['brand', 'monthly_cost', 'Baseline Perc share', 'Scenario Perc share']].copy()
     interDf['product1'] = SIOplan['Price'] * SIOplan['Baseline Perc share']
     interDf['product2'] = SIOplan['Price'] * SIOplan['Scenario Perc share']
     num1 = interDf[['brand', 'product1']].groupby('brand').sum()
-    del num1.index.name
+    #del num1.index.name
+    num1.index.name = None
     num1 = interDf[['brand', 'product1']].groupby('brand').sum()
-    del num1.index.name
+    #del num1.index.name
+    num1.index.name = None
     num2 = interDf[['brand', 'product2']].groupby('brand').sum()
-    del num2.index.name
+    #del num2.index.name
+    num2.index.name = None
 
     churnStat['Before MMC'] = num1['product1'] / denom['Baseline Perc share']
     churnStat['After MMC'] = num2['product2'] / denom['Scenario Perc share']
